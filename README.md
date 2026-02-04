@@ -1,16 +1,169 @@
-# React + Vite
+# 🍅 Tomato Leaf Disease Detection Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered web application for automatic detection and classification of tomato leaf diseases using Deep Learning and Image Processing.  
+The system allows users to upload tomato leaf images and receive accurate disease predictions, supporting early intervention and sustainable agriculture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Overview
 
-## React Compiler
+Plant diseases significantly impact agricultural productivity and farmer income. Traditional disease identification methods rely on manual inspection, which is time-consuming, error-prone, and often inaccessible in rural areas.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project provides a web-based AI solution that integrates deep learning models with an intuitive user interface to detect tomato leaf diseases efficiently and accurately.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Objectives
+
+- Detect and classify tomato leaf diseases using deep learning
+- Perform comparative analysis of CNN and transfer learning models
+- Deploy the best-performing model via a web application
+- Assist early disease detection to reduce crop loss
+- Support sustainable and precision agriculture
+
+---
+
+## 🦠 Supported Tomato Leaf Diseases
+
+- Healthy Leaf  
+- Bacterial Spot  
+- Early Blight  
+- Late Blight  
+- Leaf Mold  
+- Septoria Leaf Spot  
+- Spider Mites (Two-Spotted)  
+- Target Spot  
+- Mosaic Virus  
+- Yellow Leaf Curl Virus  
+
+---
+
+## 🧠 Deep Learning Models Used
+
+- Custom Convolutional Neural Network (CNN)
+- MobileNetV2
+- VGG16
+- InceptionV3
+- ResNet50
+- EfficientNetB0
+
+Models were evaluated using Accuracy, Precision, Recall, F1-Score, and mAP to select the best-performing architecture.
+
+---
+
+## 🏗️ System Workflow
+
+1. User uploads a tomato leaf image  
+2. Image preprocessing (resizing, normalization, enhancement)  
+3. Disease prediction using trained deep learning model  
+4. Result displayed with predicted disease class  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- React.js
+
+### Backend
+- Node.js
+- Express.js
+
+### AI / ML
+- Python
+- TensorFlow / Keras
+- OpenCV
+- NumPy
+- Pandas
+
+### Tools
+- Git & GitHub
+- Google Colab / Jupyter Notebook
+
+---
+
+## 📂 Dataset
+
+- Mendeley Tomato Leaf Disease Dataset  
+- Kaggle PlantVillage Tomato Dataset  
+
+Both controlled and real-field images were used to improve model robustness.
+
+---
+
+## 🚀 How to Run the Project
+
+### Clone Repository
+```bash
+git clone https://github.com/your-username/tomato-leaf-disease-detection.git
+cd tomato-leaf-disease-detection
+```
+
+### Backend Setup
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Access the application at:
+```
+http://localhost:3000
+```
+
+---
+
+## 📊 Evaluation Metrics
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Mean Average Precision (mAP)  
+
+---
+
+## 🌱 Applications & Impact
+
+- Early disease detection for farmers  
+- Reduced pesticide misuse  
+- Support for precision agriculture  
+- Academic and research use  
+
+---
+
+## 🔮 Future Enhancements
+
+- Disease severity estimation  
+- Mobile application support  
+- Multilingual interface  
+- Treatment and prevention recommendations  
+
+---
+
+## 👨‍💻 Contributors
+
+- Hrishabh Kumar Singh  
+- Ranadip Das  
+- Bishal Ranjan Pallei  
+- Jinmay Rabha  
+
+Department of Computer Science and Engineering  
+Assam Don Bosco University
+
+---
+
+## 📜 License
+
+This project is developed for academic and research purposes.  
+Free to use with proper attribution.
