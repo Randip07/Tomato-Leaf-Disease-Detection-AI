@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getResponse } from "../data/getResponse";
 
 const ImageUpload = ({setPreview, image, setImage}) => {
 //    const [image, setImage] = useState(null);
@@ -28,9 +29,9 @@ const ImageUpload = ({setPreview, image, setImage}) => {
 
       try {
         setLoading(true);
-        console.log('====================================');
-        console.log(formData);
-        console.log('====================================');
+        const res = await getResponse(formData)
+        console.log(res);
+        
         
       } catch (error) {
         console.error("Error uploading image:", error);

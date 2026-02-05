@@ -1,5 +1,5 @@
-export const getResponse = async ()=>{
-    const response = await fetch("http://localhost:5000/predict", {
+export const getResponse = async (formData)=>{
+    const response = await fetch("http://localhost:8000/predict", {
           method: "POST",
           body: formData,
         });
