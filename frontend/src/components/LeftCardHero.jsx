@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LeftCardHero = () => {
+const LeftCardHero = ({url}) => {
   return (
     <>
       {/* --- Left Side: Hero Image --- */}
