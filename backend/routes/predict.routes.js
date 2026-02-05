@@ -14,5 +14,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/predict", upload.single("image"), predictDisease);
+// router.post("/predict", upload.single("image"), (req, res)=>{
+//   res.send("OK")
+// });
 
 module.exports = router;
