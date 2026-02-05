@@ -1,15 +1,15 @@
 import React, { use, useState } from "react";
-import { Camera, Leaf } from "lucide-react";
-import NavBar from "./NavBar";
-import UploadCard from "./UploadCard";
-import LeftCardHero from "./LeftCardHero";
-import PopUp from "./Popup";
+import NavBar from "../components/NavBar";
+import PopUp from "../components/Popup";
+import Loading from "../components/Loading";
+import LeftCardHero from "../components/LeftCardHero";
+import ResponseCard from "../components/ResponseCard";
 
-const HomePage = () => {
+const Response = () => {
     const [showPopUp, setShowPopUp] = useState(false);
     const [popUpType, setPopUpType] = useState("")
 
-//     
+    
 
    return (
       <div className="min-h-screen w-full flex flex-col font-sans bg-gray-100 ">
@@ -18,11 +18,9 @@ const HomePage = () => {
 
          {/* ================= Main Hero Content ================= */}
          <main className="flex justify-center mt-5">
-            <div className="flex flex-col md:flex-row w-3/4 h-2/3 ">
-               <LeftCardHero />
-
-               {/* --- Right Side: Upload Action Area --- */}
-               <UploadCard />
+            <div className="flex flex-col md:flex-row w-3/4">
+               <LeftCardHero/>
+               <ResponseCard/>
                {showPopUp && <PopUp onClose={() => setShowPopUp(false)} popUpType={popUpType} />}
                 
             </div>
@@ -31,4 +29,4 @@ const HomePage = () => {
    );
 };
 
-export default HomePage;
+export default Response;
