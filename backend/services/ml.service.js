@@ -7,7 +7,7 @@ exports.runModel = (imagePath) => {
     const scriptPath = path.join(__dirname, "../ml/predict.py");
 
     execFile(
-      "python",
+      "python3",
       [scriptPath, imagePath],
       { timeout: 30000 },
       (error, stdout) => {
