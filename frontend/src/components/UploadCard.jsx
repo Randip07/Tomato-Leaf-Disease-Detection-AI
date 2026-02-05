@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Camera, Leaf, X } from "lucide-react";
 import ImageUpload from "./ImageUpload";
-const UploadCard = () => {
+
+const UploadCard = ({setShowCard, setPrediction}) => {
   const [image, setImage] = useState(null);
    const [preview, setPreview] = useState(null);
    const onClose = () => {
@@ -9,14 +10,14 @@ const UploadCard = () => {
     setImage(null)
    };
    return (
-      <div className="w-full md:w-1/2 bg-[#8D6E63] flex items-center justify-center p-6 md:p-12 lg:p-20 rounded-r-3xl">
+      <div className="  bg-[#8D6E63] md:w-1/2 flex items-center justify-center py-10 rounded-r-3xl">
          {/* The Dashed Upload Box */}
-         <div className="w-full max-w-xl bg-[#2E7D32] rounded-3xl border-[3px] border-dashed border-white/40 p-8 md:p-12 flex flex-col items-center text-center text-white space-y-6 shadow-lg">
+         <div className="bg-[#2E7D32] rounded-3xl border-[3px] border-dashed border-white/40 text-white shadow-lg flex flex-col items-center p-10 gap-3">
             {!preview && (
                <>
-                  <Camera className="w-20 h-20 md:w-24 md:h-24 opacity-90" strokeWidth={1.5} />
+                  <Camera className="w-30 h-30  opacity-90" strokeWidth={1.5} />
 
-                  <h1 className="text-2xl md:text-3xl font-semibold">Upload Your Image Here</h1>
+                  <h1 className="text-xl font-semibold">Upload Your Image Here</h1>
                </>
             )}
 
@@ -29,9 +30,9 @@ const UploadCard = () => {
                </div>
             )}
 
-            <ImageUpload setPreview={setPreview} image={image} setImage={setImage}/>
+            <ImageUpload setPreview={setPreview} image={image} setImage={setImage} setShowCard={setShowCard} setPrediction={setPrediction}/>
 
-            <p className="text-sm md:text-base opacity-90 max-w-xs leading-relaxed pt-2">Instantly detect diseases and get AI-based treatment plans.</p>
+            <p className="text-sm opacity-90 max-w-xs leading-relaxed pt-2">Instantly detect diseases and get AI-based treatment plans.</p>
 
             {/* Hidden file input field for functionality later */}
             <input type="file" id="file-upload" className="hidden" accept="image/png, image/jpeg" />

@@ -5,7 +5,7 @@ const LeftCardHero = ({url}) => {
     <>
       {/* --- Left Side: Hero Image --- */}
         <div 
-          className="w-full md:w-1/2 min-h-[300px] md:min-h-auto bg-cover bg-center relative rounded-l-3xl"
+          className="w-full md:w-1/2 bg-cover bg-center relative rounded-l-3xl"
           // Using a placeholder image from Unsplash that matches the greenhouse aesthetic
           style={{ 
             backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1661811820259-2575b82101bf?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',

@@ -3,7 +3,7 @@ import { Camera, Leaf } from "lucide-react";
 
 const NavBar = ({setShowPopUp, setPopUpType}) => {
    return (
-      <nav className="bg-[#2E7D32] text-white py-8 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10 shadow-md">
+      <nav className="bg-[#2E7D32] w-full text-white py-8 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10 shadow-md">
          {/* Logo Area */}
          <div className="flex items-center space-x-2">
             {/* A composite logo trying to match the design's feel */}
