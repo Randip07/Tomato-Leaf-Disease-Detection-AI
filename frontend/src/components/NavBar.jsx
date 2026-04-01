@@ -1,9 +1,9 @@
 import React from "react";
 import { Camera, Leaf } from "lucide-react";
 
-const NavBar = ({setShowPopUp, setPopUpType}) => {
+const NavBar = ({ setShowPopUp, setPopUpType }) => {
    return (
-      <nav className="bg-[#2E7D32] w-full text-white py-8 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10 shadow-md">
+      <nav className="bg-gradient-to-tr from-black to-[#1aac21] w-full text-white py-8 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10 shadow-md h-[8vh]">
          {/* Logo Area */}
          <div className="flex items-center space-x-2">
             {/* A composite logo trying to match the design's feel */}
@@ -18,10 +18,22 @@ const NavBar = ({setShowPopUp, setPopUpType}) => {
 
          {/* Desktop Navigation Links */}
          <div className="hidden md:flex space-x-15 text-lg font-medium">
-            <button onClick={()=>{setShowPopUp(true); setPopUpType("1")}} className="hover:text-green-200 transition-colors cursor-pointer">
+            <button
+               onClick={() => {
+                  setShowPopUp(true);
+                  setPopUpType("1");
+               }}
+               className="hover:text-green-200 transition-colors cursor-pointer"
+            >
                How it Works
             </button>
-            <button onClick={()=>{setShowPopUp(true); setPopUpType("2")}} className="hover:text-green-200 transition-colors cursor-pointer">
+            <button
+               onClick={() => {
+                  setShowPopUp(true);
+                  setPopUpType("2");
+               }}
+               className="hover:text-green-200 transition-colors cursor-pointer"
+            >
                Disease Library
             </button>
             {/* <button onClick={()=>setShowPopUp(true)} className="hover:text-green-200 transition-colors cursor-pointer">

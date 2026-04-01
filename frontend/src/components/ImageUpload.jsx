@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { getResponse } from "../data/getResponse";
+import { getCure, getResponse } from "../data/getResponse";
 import { useNavigate } from "react-router-dom";
 
-const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction}) => {
+const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction, setUrl, setCure}) => {
    //    const [image, setImage] = useState(null);
    //    const [preview, setPreview] = useState(null);
    const [loading, setLoading] = useState(false);
@@ -15,6 +15,7 @@ const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction}
 
       setImage(file);
       setPreview(URL.createObjectURL(file));
+      setUrl(URL.createObjectURL(file))
    };
 
    const handleSubmit = async (e) => {
@@ -32,7 +33,14 @@ const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction}
          setLoading(true);
          setShowCard('2')
          const data = await getResponse(formData);
+
+         if (data.disease !="Healthy"){
+            const cureTips = await getCure(data.disease) 
+            setCure(cureTips);
+         }
+
          setPrediction(data);
+         
       } catch (error) {
          console.error("Error uploading image:", error);
          alert("Failed to upload image");
@@ -44,9 +52,9 @@ const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction}
    return (
       <div>
          <form onSubmit={handleSubmit} className="flex flex-col">
-            <label className="flex flex-col items-center justify-center px-10 py-2 border-2 border-dashed border-green-500 rounded-xl cursor-pointer bg-green-50 hover:bg-green-100 transition">
+            <label className="flex flex-col items-center justify-center px-8 py-2 border-2 border-dashed border-green-500 rounded-xl cursor-pointer bg-green-50 hover:bg-green-100 transition">
                <p className="text-green-700 font-semibold">Click to upload </p>
-               <p className="text-sm text-gray-500 mt-1">PNG, JPG, JPEG supported</p>
+               <p className="text-xs text-gray-500 mt-1">PNG, JPG, JPEG supported</p>
 
                <input type="file" accept="image/*" onChange={handleImageChange} className="hidden" />
             </label>

@@ -1,6 +1,6 @@
 export const HowItWorks = () => {
    return (
-      <section id="how-it-works" className="text-black max-w-2xl gap-5 flex flex-col">
+      <section id="how-it-works" className="text-black text-sm max-w-2xl gap-5 flex flex-col">
          <p>
             This system allows you to detect tomato leaf diseases easily by uploading a leaf image. The entire process is automated and designed to be simple and fast, even for
             first-time users.
@@ -54,7 +54,7 @@ export const HowItWorks = () => {
 
 export const DiseaseLibrary = () => {
    return (
-      <section id="disease-library" className="text-black max-w-2xl gap-5 flex flex-col">
+      <section id="disease-library" className="text-black text-sm max-w-2xl gap-5 flex flex-col">
          <h2>🌿 Welcome to the Disease Library</h2>
 
          <p>
