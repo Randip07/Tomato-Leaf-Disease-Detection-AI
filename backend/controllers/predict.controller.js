@@ -1,7 +1,7 @@
 const { runModel } = require("../services/ml.service");
 
 exports.predictDisease = async (req, res) => {
-  console.log("UPLOADED FILE:", req.file);
+  // console.log("UPLOADED FILE:", req.file);
 
   if (!req.file) {
     return res.status(400).json({ error: "Image not uploaded" });

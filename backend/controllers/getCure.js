@@ -1,6 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-// const genAI = new GoogleGenerativeAI("AIzaSyBxeJIX6gRgcAqk1DyvawPRjP_4l2mfAB0");
-const genAI = new GoogleGenerativeAI("AIzaSyD5eTmnVwXMFgE3hVjfkXCqXghUuj_ww-I");
+const genAI = new GoogleGenerativeAI("AIzaSyA1FVpsn45eOSwBEIIm8IlEv1VOhrXU4nA");
+// const genAI = new GoogleGenerativeAI("AIzaSyA0gSQYe5HANb8MtupVtcVnWNFQYaV32UM");
 const model = genAI.getGenerativeModel({
    model: "gemini-2.5-flash",
    systemInstruction: `You are an expert Agricultural Scientist.For any tomato disease provided, return exactly 5 points. Each point must be a single, short sentence under 15 words. Strict Format: "**Keyword**: One-line actionable cure." No introductory text, no

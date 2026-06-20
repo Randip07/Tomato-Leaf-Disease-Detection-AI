@@ -34,7 +34,7 @@ const ImageUpload = ({ setPreview, image, setImage , setShowCard, setPrediction,
          setShowCard('2')
          const data = await getResponse(formData);
 
-         if (data.disease !="Healthy"){
+         if (data.disease !="Healthy" && data.disease !="Unknown" ){
             const cureTips = await getCure(data.disease) 
             setCure(cureTips);
          }
